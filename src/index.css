@@ -2,10 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html, body {
+  margin: 0;
+  padding: 0;
   background-color: black;
   color: white;
   overflow-x: hidden;
-  margin: 0;
   font-family: system-ui, sans-serif;
 }
+
+/* ===== Your cinematic animations (moved from <style jsx>) ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(5deg); }
+}
+
+@keyframes floatCrazy {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(30px, -40px) rotate(10deg); }
+  50% { transform: translate(-20px, -60px) rotate(-10deg); }
+  75% { transform: translate(40px, -30px) rotate(15deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes cornerPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideGradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes scanline {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* helper class used in your code */
+.animate-scanline { animation: scanline 8s linear infinite; }
