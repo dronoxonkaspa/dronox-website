@@ -3,74 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DRONOX - The Ox Has Taken Flight</title>
+  <title>DRONOX – The Ox Has Taken Flight</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-30px) rotate(5deg); }
-    }
-    
-    @keyframes floatCrazy {
-      0% { transform: translate(0, 0) rotate(0deg); }
-      25% { transform: translate(30px, -40px) rotate(10deg); }
-      50% { transform: translate(-20px, -60px) rotate(-10deg); }
-      75% { transform: translate(40px, -30px) rotate(15deg); }
-      100% { transform: translate(0, 0) rotate(0deg); }
-    }
-    
-    @keyframes cornerPulse {
-      0%, 100% { opacity: 0.5; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.1); }
-    }
-    
-    @keyframes slideIn {
-      from { transform: translateX(-100px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-    
-    @keyframes slideInRight {
-      from { transform: translateX(100px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-    
-    @keyframes slideGradient {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 200% 50%; }
-    }
-    
-    @keyframes slidePattern {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
-    
-    @keyframes scanline {
-      0% { top: 0%; }
-      100% { top: 100%; }
-    }
-    
-    @keyframes fall {
-      0% { transform: translateY(-100%); }
-      100% { transform: translateY(100vh); }
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-
-    body {
-      margin: 0;
-      background: black;
-      overflow-x: hidden;
-    }
-  </style>
-
+    body {margin:0;background:black;color:white;overflow-x:hidden;font-family:monospace;}
+    @keyframes fall{0%{transform:translateY(-100%);}100%{transform:translateY(100vh);}}
+    @keyframes floatCrazy{0%{transform:translate(0,0) rotate(0deg);}25%{transform:translate(30px,-40px) rotate(10deg);}50%{transform:translate(-20px,-60px) rotate(-10deg);}75%{transform:translate(40px,-30px) rotate(15deg);}100%{transform:translate(0,0) rotate(0deg);}}
+    @keyframes cornerPulse{0%,100%{opacity:.5;transform:scale(1);}50%{opacity:1;transform:scale(1.1);}}
   </style>
 </head>
 <body class="bg-black text-white">
 
-<!-- Matrix Rain -->
+<!-- MATRIX RAIN -->
 <div id="matrix" class="fixed inset-0 opacity-5 pointer-events-none"></div>
 
 <!-- HERO -->
@@ -94,7 +38,7 @@
       <button class="px-12 py-6 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 text-2xl font-black border-4 border-white hover:scale-110 transition">🎮 PLAY & EARN</button>
     </a>
     <a href="https://lfg.kaspa.com/app/token/0x0C2192417e5e040529085e6f7566eF227A7E9337" target="_blank">
-      <button class="px-12 py-6 bg-black border-4 border-cyan-400 text-2xl font-black text-cyan-400 hover:bg-cyan-400 hover:text-black transition">💰 BUY $DRONO</button>
+      <button class="px-12 py-6 bg-black border-4 border-cyan-400 text-2xl font-black text-cyan-400 hover:bg-cyan-400 hover:text-black transition">💰 BUY </button>
     </a>
   </div>
 
@@ -132,11 +76,38 @@
     </div>
     <div class="p-10 border-4 border-purple-400 hover:scale-105 transition">
       <h3 class="text-3xl text-purple-400 font-black mb-4">🎮 ACTUAL UTILITY</h3>
-      <p class="text-lg text-gray-300">Play games. Earn $DRONO. Build the herd.</p>
+      <p class="text-lg text-gray-300">Play games. Earn . Build the herd.</p>
     </div>
     <div class="p-10 border-4 border-yellow-400 hover:scale-105 transition">
       <h3 class="text-3xl text-yellow-400 font-black mb-4">💎 EARLY AF</h3>
       <p class="text-lg text-gray-300">No fake hype. No dump. Just growth and good vibes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="py-32 px-6 text-center">
+  <h2 class="text-6xl md:text-8xl font-black mb-10 text-cyan-400" style="text-shadow:0 0 40px #00ffff;">THE PLAN</h2>
+  <div class="max-w-5xl mx-auto space-y-12">
+    <div><h3 class="text-4xl font-black text-cyan-400">🚀 LIFTOFF</h3><p class="text-gray-400">Token launch • Game alpha • Community growth</p></div>
+    <div><h3 class="text-4xl font-black text-pink-500">⚡ MOMENTUM</h3><p class="text-gray-400">Marketing push • Partnerships • Game V2</p></div>
+    <div><h3 class="text-4xl font-black text-purple-500">💥 EXPANSION</h3><p class="text-gray-400">NFT drop • Listings • DAO setup</p></div>
+    <div><h3 class="text-4xl font-black text-yellow-400">🌙 DOMINATION</h3><p class="text-gray-400">World tour • Cross-chain • Top-tier project</p></div>
+  </div>
+</section>
+
+<!-- DJ DRONOX -->
+<section class="relative py-32 px-6 bg-gradient-to-b from-black via-purple-950/10 to-black">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-6xl font-black mb-4 text-pink-500" style="text-shadow:0 0 30px #ff00ff;">DJ DRONOX 🎧</h2>
+    <p class="text-xl text-gray-400 mb-12">Dropping beats & memes. Coming soon.</p>
+    <div class="relative group">
+      <div class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-purple-500 blur-2xl opacity-30 group-hover:opacity-60 transition"></div>
+      <div class="relative bg-black border-4 border-pink-500 aspect-video flex items-center justify-center">
+        <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+          <source src="./videos/dj-dronox.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
   </div>
 </section>
@@ -152,9 +123,9 @@
   for(let i=0;i<20;i++){
     const col=document.createElement('div');
     col.className='absolute text-cyan-400 font-mono text-xs';
-    col.style.left=`${i*5}%`;
-    col.style.animation=`fall ${Math.random()*10+5}s linear infinite`;
-    col.style.animationDelay=`${Math.random()*5}s`;
+    col.style.left=${i*5}%;
+    col.style.animation=all s linear infinite;
+    col.style.animationDelay=${Math.random()*5}s;
     for(let j=0;j<40;j++){
       const bit=document.createElement('div');
       bit.textContent=Math.random()>0.5?'1':'0';
@@ -163,6 +134,5 @@
     matrix.appendChild(col);
   }
 </script>
-
 </body>
 </html>
