@@ -1,1 +1,43 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRONOX – The Ox Has Taken Flight</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { margin:0; background:black; overflow-x:hidden; }
+    @keyframes fall {0%{transform:translateY(-100%);}100%{transform:translateY(100vh);}}
+    @keyframes cornerPulse {0%,100%{opacity:.5;transform:scale(1);}50%{opacity:1;transform:scale(1.1);}}
+  </style>
+</head>
+<body class="bg-black text-white">
+  <div class="fixed inset-0 opacity-5 pointer-events-none" id="matrix"></div>
+  <section class="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden">
+    <h1 class="text-9xl md:text-[16rem] font-black tracking-tighter leading-none mb-6" 
+        style="text-shadow:0 0 40px #00ffff,0 0 80px #00ffff,0 0 120px #3b82f6,0 0 160px #ff00ff;color:#00ffff;-webkit-text-stroke:2px #3b82f6;">
+        DRONOX
+    </h1>
+    <p class="text-6xl md:text-8xl font-black mb-8" style="text-shadow:0 0 30px #ff00ff;color:#ff00ff;">THE OX HAS TAKEN</p>
+    <p class="text-6xl md:text-8xl font-black mb-8" style="text-shadow:0 0 30px #fbbf24;color:#fbbf24;">FLIGHT 🚀</p>
+    <a href="https://t.me/Drono_Wars_bot" target="_blank">
+      <button class="px-20 py-8 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 font-black text-4xl text-white border-8 border-white hover:scale-110 transition-all">
+        JOIN NOW
+      </button>
+    </a>
+    <p class="text-gray-400 mt-10 font-mono">© 2025 DRONOX • The Ox That Flies 🐂⚡</p>
+  </section>
+  <script>
+    const m=document.getElementById('matrix');
+    for(let i=0;i<20;i++){
+      const c=document.createElement('div');
+      c.className='absolute text-cyan-400 font-mono text-xs';
+      c.style.left=${i*5}%;
+      c.style.animation=all s linear infinite;
+      c.style.animationDelay=${Math.random()*5}s;
+      for(let j=0;j<40;j++){const bit=document.createElement('div');bit.textContent=Math.random()>0.5?'1':'0';c.appendChild(bit);}
+      m.appendChild(c);
+    }
+  </script>
+</body>
+</html>
